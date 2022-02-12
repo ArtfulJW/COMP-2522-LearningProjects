@@ -43,7 +43,7 @@ public class CarRunner {
         C.switchEngine(A, "V10");
         C.switchTransmission(A, "Automatic");
         
-        if (A instanceof Car) {
+        if (A instanceof Vehicle) {
             A.horn();
         }
         
