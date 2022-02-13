@@ -1,7 +1,7 @@
 package p4;
 
 interface Something {
-    
+
     public void alert();
     
 }
