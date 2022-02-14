@@ -51,7 +51,7 @@ public class Student {
     
     
     public Student() {
-        studentID = this.new ID(inputID(),inputName());
+        studentID = assignID(inputID(),inputName());
     }
     
     public String toString() {
@@ -61,6 +61,8 @@ public class Student {
     public static void main(String[] args){
         // First ID created on creation of a new Student.
         Student s1 = new Student();
+        
+        
         
         // Second ID Created Manually
         //Student.ID s1ID2 = s1.new ID(s1.inputID(), s1.inputName());
