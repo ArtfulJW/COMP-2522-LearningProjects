@@ -89,6 +89,11 @@ public class StreamingCollections {
                 .sorted(Comparator.comparing(Transaction::getValue).reversed())
                 .map(Transaction::getId)
                 .collect(Collectors.toList());
-        print(transactionsIDs);
+        //print(transactionsIDs);
+        
+        List<Integer> test = list.stream()
+                .sorted()
+                .collect(Collectors.toList());
+        print(test);
     }
 }
