@@ -1,5 +1,13 @@
 package ThreadPractice;
 
+import java.util.concurrent.TimeUnit;
+
+/*
+ * To identify a Race Condition, there must be a globally accessed value.
+ * If multiple threads are racing to access this global variable, then it is
+ * a Race Condition.
+ */
+
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadExample implements Runnable{
@@ -9,7 +17,19 @@ public class ThreadExample implements Runnable{
     static ReentrantLock counterLock = new ReentrantLock(true);
     
     public void incrementCounter() {
-        counterLock.lock();
+        try {
+            while(!counterLock.tryLock(1, TimeUnit.SECONDS)) {
+                System.out.println(Thread.currentThread().getName() + " Waiting for Lock");
+            }
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } 
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e){
+            
+        }
 
         try {
             System.out.println(Thread.currentThread().getName() + ": "+ counter);
@@ -35,6 +55,7 @@ public class ThreadExample implements Runnable{
         Thread Two = new Thread(TE);
         One.start();
         Two.start();
+
     }
 
 }

@@ -7,7 +7,7 @@ import Friendly.Me;
  * This line is throwing an error because the method greet() from 
  * package Friendly, class Me, is not visible from this package.
  * Solution:
- * Define that the function is public, or protected to define if the function
+ * Define that the greet() function is public, or protected to define if the function
  * is visible.
  */
 

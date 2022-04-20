@@ -1,6 +1,6 @@
 package PracticeMidterm;
 
-/* For this example, the problem is at Line 15.
+/* For this example, the problem is at Line 22.
  * Notice how in the Beta class, the foo() method's access modifier is different. Because of this, it will throw a compile-time error.
  * To fix this, keep the access modifier the same as it's parent definition of foo() method, which is 'public'.
  */

@@ -9,11 +9,11 @@ package PracticeMidterm;
  * 
  */
 
-class Animal {
-    public void walk(){
-        System.out.println("Walk like an animal");
-    }
-}
+//class Animal {
+//    public void walk(){
+//        System.out.println("Walk like an animal");
+//    }
+//}
 class Tiger extends Animal {
     public void walk(){
         //super.walk();

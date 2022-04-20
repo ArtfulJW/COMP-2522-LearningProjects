@@ -6,8 +6,7 @@ class Examine {
     public static void dance(int value) {
         int i = 0;
         while (i < data.length) {
-            for (int j = 0; j < 100; j++)
-                ;
+            //for (int j = 0; j < 100; j++);
             data[i] = value;
         }
     }

@@ -2,7 +2,7 @@ package p4;
 
 interface Something {
 
-    public void alert();
+
     
 }
 
@@ -63,7 +63,7 @@ class Brass extends Wind{
     
 }
 
-public class Main {
+public class Orchestra {
     
     public static void main(String[]args) {
         Instrument Orchestra[] = {new Brass(),new Wind(), new Percussion()};
